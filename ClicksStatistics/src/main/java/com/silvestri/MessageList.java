@@ -30,7 +30,6 @@ public class MessageList {
 		HttpRequest request = HttpRequest.newBuilder()
 	            .GET()
 	            .uri(URI.create("https://api" + Starter.getServer_number() + ".esv2.com/v2/Api/Messages?apiKey=" + Starter.getApi_key() + "&startDate=" + Starter.getStartDate() + "&" + "endDate=" + Starter.getEndDate()))
-	            //.uri(URI.create("https://api4.esv2.com/v2/Api/Messages?apiKey=2QZyexYB6TOKl2XAo4ez&startDate=2021-09-01&endDate=2021-09-30"))
 	            .setHeader("User-Agent", "Java 16 HttpClient Bot")
 	            .build();
 		
