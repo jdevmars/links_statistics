@@ -43,11 +43,6 @@ public class LinksStatistics {
 			
 		HttpRequest request = HttpRequest.newBuilder()
 				.GET()
-				//.uri(URI.create("https://api3.esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=1l52wORZAYlpRzWxll8D"))
-				//.uri(URI.create("https://api4.esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=2QZyexYB6TOKl2XAo4ez"))
-				//.uri(URI.create("https://api4.esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=2QZyexYB6TOKl2XAo4ez&startDate=" + startDate + "&" + "endDate=" + endDate))
-				//.uri(URI.create("https://api7.esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=GyvdqBcZ0jlAeQpSVDf0&startDate=" + startDate + "&" + "endDate=" + endDate))
-				//.uri(URI.create("https://api4.esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=2QZyexYB6TOKl2XAo4ez&startDate=2021-09-01&endDate=2021-09-30"))
 				.uri(URI.create("https://api" + Starter.getServer_number() + ".esv2.com/v2/Api/LinkStatistics/" + ids.get(index) + "?apiKey=" + Starter.getApi_key() + "&startDate=" + Starter.getStartDate() + "&" + "endDate=" + Starter.getEndDate()))
 				.setHeader("User-Agent", "Java 16 HttpClient Bot")
 				.build();
@@ -89,9 +84,9 @@ public class LinksStatistics {
 			BufferedWriter output = new BufferedWriter(file);
 			PrintWriter out = new PrintWriter(output);
 			
-			System.out.println("Relatório de cliques de " + Starter.getStartDate() + " a " + Starter.getEndDate() + ":");
+			System.out.println("RelatÃ³rio de cliques de " + Starter.getStartDate() + " a " + Starter.getEndDate() + ":");
 			System.out.println("================================================");
-			out.println("Relatório de cliques de " + Starter.getStartDate() + " a " + Starter.getEndDate() + ":");
+			out.println("RelatÃ³rio de cliques de " + Starter.getStartDate() + " a " + Starter.getEndDate() + ":");
 			out.println("==================================================");
 			
 			List<Element> apiResponse = classElement.getChildren("ApiResponse"); // cria lista de <ApiResponse>
@@ -144,8 +139,8 @@ public class LinksStatistics {
 		 	               
 		 	                // ids.add(count, messageElement.getChildText("Id"));
 		 	               
-		 	                System.out.print("Cliques únicos: ");
-		 	                out.print("Cliques únicos: ");
+		 	                System.out.print("Cliques Ãºnicos: ");
+		 	                out.print("Cliques Ãºnicos: ");
 		 	                System.out.println(linkStatisticElement.getChildText("UniqueClicks"));
 		 	                out.println(linkStatisticElement.getChildText("UniqueClicks"));
 	        			}
